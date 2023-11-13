@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://0qs1mc64xy5a"]
+
+[ext_resource type="Script" path="res://day/day-bg.gd" id="1_8p7ob"]
+[ext_resource type="Texture2D" uid="uid://bxppp63ljrr4j" path="res://day/sky-base.png" id="2_v07w7"]
+[ext_resource type="Texture2D" uid="uid://w8j3oo0s2rp7" path="res://day/abs-clouds-bg.png" id="3_hlev2"]
+[ext_resource type="Texture2D" uid="uid://b3ratbhqubhdv" path="res://day/big-clouds.png" id="4_jkke8"]
+[ext_resource type="Texture2D" uid="uid://doi5o6hfr4t4e" path="res://day/bg-elements/hill-bg.png" id="5_foktg"]
+[ext_resource type="Texture2D" uid="uid://cxi6r3scvgpxx" path="res://day/bg-elements/trees-bg.png" id="6_vggk8"]
+
+[node name="day-bg" type="ParallaxBackground"]
+script = ExtResource("1_8p7ob")
+
+[node name="Sky-base" type="Sprite2D" parent="."]
+texture = ExtResource("2_v07w7")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="Abs-clouds-bg" type="Sprite2D" parent="ParallaxLayer"]
+texture = ExtResource("3_hlev2")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+
+[node name="Big-clouds" type="Sprite2D" parent="ParallaxLayer2"]
+scale = Vector2(0.449898, 0.449898)
+texture = ExtResource("4_jkke8")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Hill-bg" type="Sprite2D" parent="ParallaxLayer3"]
+scale = Vector2(1, 1.00931)
+texture = ExtResource("5_foktg")
+centered = false
+
+[node name="Hill-bg2" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(5155, 0)
+scale = Vector2(1, 1.00931)
+texture = ExtResource("5_foktg")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Trees-bg" type="Sprite2D" parent="ParallaxLayer4"]
+texture = ExtResource("6_vggk8")
+centered = false
